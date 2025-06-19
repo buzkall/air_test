@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ShopItem extends Model
 {
+    protected $fillable = ['title', 'description', 'price'];
     /** @use HasFactory<\Database\Factories\ShopItemFactory> */
     use HasFactory;
 
