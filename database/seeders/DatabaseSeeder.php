@@ -15,6 +15,15 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        // Seed domain data
+        $this->call([
+            CustomerSeeder::class,
+            ShopItemCategorySeeder::class,
+            ShopItemSeeder::class,
+            OrderSeeder::class,
+        ]);
+
+        // Optionally, create a test user
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
